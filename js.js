@@ -1,21 +1,62 @@
 
-class yo{
-    constructor(nombre, apellido, age, pets, artist){
+class Usuario{
+    constructor(nombre, apellido, libros, mascotas){
         this.nombre = nombre;
         this.apellido = apellido;
-        this.age = age;
-        this.pets = pets;
-        this.artist = artist;
-
+        this.libros =  libros
+        this.mascotas = mascotas;
+      this.Usuario=0;
     }
+
+    static UsuarioGeneral= 0
+getFullName(){
+    return this.nombre + " " + this.apellido;
+}
+addMascota(){
+    // añadir mascota
+this.mascotas.push
+
+}
+countMascotas(){
+
+    return this.mascotas.split(",").length;
+}
+incrementarUsuario(){
+    this.Usuario++;
+    Usuario.UsuarioGeneral++;
+  
+  
 }
 
-const datos = [];
-datos.push(new yo("Matias", "Minoni", "21", "Pappo, Zaira", "Kendrick_Lamar, Mac_Miller, Eminem, Drake"));
 
-const GetFullName=console.log(datos[0].nombre + " " + datos[0].apellido);
-// Añadir pets
-const contar_pets=console.log(datos[0].pets.split(",").length);
-const ObtenerKendrick=console.log(datos[0].artist.split(",")[0]);
+addBooks(){
 
-console.log(datos)
+
+    this.libros.push("Nombre: El señor de los anillos, Autor: J.R.R. Tolkien");
+
+}
+getBookNames(){
+
+    return this.libros[0].Nombre + " Y " + this.libros[1].Nombre;
+}    
+
+obtenerResponsable(){
+    return "${this.nombre} ${this.apellido}";
+}
+
+}
+let usuario1 = new Usuario("Maria", "Perez", [{Nombre:"Viaje al fin de la noche", Autor:"Louis-Ferdinand Céline"},{Nombre:"Don Quijote de la Mancha", Autor:"Miguel de Cervantes"}], "Perro,Gato");
+usuario1.incrementarUsuario();
+
+console.log(usuario1);
+let countMascotas=usuario1.countMascotas();
+let responsable= usuario1.obtenerResponsable
+let getBookNames= usuario1.getBookNames();
+let getFullName= usuario1.getFullName();
+let addMascota= usuario1.addMascota();
+let addBooks= usuario1.addBooks();
+
+console.log(countMascotas)
+console.log(getFullName);
+console.log(getBookNames)
+console.log(addMascota)
