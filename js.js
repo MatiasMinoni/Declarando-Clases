@@ -14,12 +14,11 @@ getFullName(){
 }
 addMascota(){
     // añadir mascota
-this.mascotas.push
-
+    this.mascotas.push("Perro");
 }
 countMascotas(){
-
-    return this.mascotas.split(",").length;
+// cantidad de mascotas
+    return this.mascotas[0].split(" ").length;	
 }
 incrementarUsuario(){
     this.Usuario++;
@@ -45,7 +44,7 @@ obtenerResponsable(){
 }
 
 }
-let usuario1 = new Usuario("Maria", "Perez", [{Nombre:"Viaje al fin de la noche", Autor:"Louis-Ferdinand Céline"},{Nombre:"Don Quijote de la Mancha", Autor:"Miguel de Cervantes"}], "Perro,Gato");
+let usuario1 = new Usuario("Maria", "Perez", [{Nombre:"Viaje al fin de la noche", Autor:"Louis-Ferdinand Céline"},{Nombre:"Don Quijote de la Mancha", Autor:"Miguel de Cervantes"}], ["Perro, Gato"]);
 usuario1.incrementarUsuario();
 
 console.log(usuario1);
@@ -59,4 +58,5 @@ let addBooks= usuario1.addBooks();
 console.log(countMascotas)
 console.log(getFullName);
 console.log(getBookNames)
-console.log(addMascota)
+console.log(addMascota);
+
